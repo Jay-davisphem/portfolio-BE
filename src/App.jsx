@@ -13,10 +13,10 @@ function App({ hideLoader }) {
         <div>
           <header>
             <div>
-              <h1 className="font-sans md:text-6xl text-5xl md:text-left text-center">
+              <h1 className="font-sans md:text-6xl text-4xl md:text-left text-center">
                 David Oluwafemi
               </h1>
-              <h2 className="md:text-4xl md:text-left text-center text-3xl font-mono tracking-widest pl-4">
+              <h2 className="md:text-4xl md:text-left text-center text-2xl font-mono tracking-widest pl-4">
                 Fullstack Engineer
               </h2>
             </div>
@@ -36,7 +36,7 @@ function App({ hideLoader }) {
         <div>
           <img
             src={img}
-            className="md:absolute lg:ml-72 lg:-mt-24 lg:max-w-3xl md:max-w-md lg:relative max-w-md"
+            className="md:absolute lg:ml-72 lg:-mt-24 max-w-xs lg:max-w-3xl md:max-w-md lg:relative max-w-md"
           />
         </div>
       </div>
