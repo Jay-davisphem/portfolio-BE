@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import logo from "./logo.svg";
 import img from "./davis.png";
 import "./App.css";
-
-function App({hideLoader}) {
-  useEffect(() => hideLoader()) 
+import NavLink from "./components/NavLink";
+function App({ hideLoader }) {
+  useEffect(() => hideLoader());
   return (
-    <section className="text-white">
+    <section>
       <div className="md:m-36 mt-12 md:flex">
         <div>
           <header>
@@ -21,51 +21,25 @@ function App({hideLoader}) {
               </h2>
             </div>
           </header>
-          <main>
+          <section>
             <nav className="my-12">
               <ul className="md:text-left text-center text-xl md:mx-36">
-                <li className="mb-4">
-                  <Link to="/home">
-                    <button>Home</button>
-                  </Link>
-                </li>
-                <li className="mb-4">
-                  <Link to="/skills">
-                    <button>Skills</button>
-                  </Link>
-                </li>
-                <li className="mb-4">
-                  <Link to="/projects">
-                    <button>Projects</button>
-                  </Link>
-                </li>
-                <li className="mb-4">
-                  <Link to="/about">
-                    <button>About</button>
-                  </Link>
-                </li>
-                <li className="mb-4">
-                  <Link to="/contact">
-                    <button>Contact Me</button>
-                  </Link>
-                </li>
+                <NavLink sty="mb-4" name="Home" />
+                <NavLink sty="mb-4" name="Skills" />
+                <NavLink sty="mb-4" name="Projects" />
+                <NavLink sty="mb-4" name="About" />
+                <NavLink sty="mb-4" name="Contact Me" />
               </ul>
             </nav>
-          </main>
+          </section>
         </div>
         <div>
           <img
             src={img}
-            className="md:absolute lg:ml-72 lg:-mt-24 lg:max-w-lg md:max-w-sm lg:relative max-w-md"
+            className="md:absolute lg:ml-72 lg:-mt-24 lg:max-w-3xl md:max-w-md lg:relative max-w-md"
           />
         </div>
       </div>
-      <footer className="flex gap-8 justify-center">
-        <div>Git</div>
-        <div>Link</div>
-        <div>Tweet</div>
-        <div>Gmail</div>
-      </footer>
     </section>
   );
 }
