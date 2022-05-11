@@ -6,11 +6,106 @@
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <style>
+        /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+        body {
+            background: #191a1a;
+            text-align: center;
+        }
+
+        .loader {
+            margin-top: 40vh;
+            font-family: ‘Arial Narrow’, sans-serif;
+            font-weight: 100;
+            font-size: 1.1em;
+            color: #a3e1f0;
+        }
+
+        .sp {
+            position: relative;
+            top: 0.63em;
+            display: inline-block;
+            text-transform: uppercase;
+            opacity: 0;
+            transform: rotateX(-90deg);
+        }
+
+        .let1 {
+            animation: drop 1.2s ease-in-out infinite;
+            animation-delay: 1.2s;
+        }
+
+        .let2 {
+            animation: drop 1.2s ease-in-out infinite;
+            animation-delay: 1.3s;
+        }
+
+        .let3 {
+            animation: drop 1.2s ease-in-out infinite;
+            animation-delay: 1.4s;
+        }
+
+        .let4 {
+            animation: drop 1.2s ease-in-out infinite;
+            animation-delay: 1.5s;
+
+        }
+
+        .let5 {
+            animation: drop 1.2s ease-in-out infinite;
+            animation-delay: 1.6s;
+        }
+
+        .let6 {
+            animation: drop 1.2s ease-in-out infinite;
+            animation-delay: 1.7s;
+        }
+
+        .let7 {
+            animation: drop 1.2s ease-in-out infinite;
+            animation-delay: 1.8s;
+        }
+
+        @keyframes drop {
+            10% {
+                opacity: 0.5;
+            }
+
+            20% {
+                opacity: 1;
+                top: 3.78em;
+                transform: rotateX(-360deg);
+            }
+
+            80% {
+                opacity: 1;
+                top: 3.78em;
+                transform: rotateX(-360deg);
+            }
+
+            90% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 0;
+                top: 6.94em
+            }
+        }
+    </style>
 </head>
 
 <body class='bg-main-bg'>
     <div id="root">
+    </div>
+    <div class='loader'>
+        <span class="let1 sp">l</span>
+        <span class="let2 sp">o</span>
+        <span class="let3 sp">a</span>
+        <span class="let4 sp">d</span>
+        <span class="let5 sp">i</span>
+        <span class="let6 sp">n</span>
+        <span class="let7 sp">g</span>
     </div>
     <script type="module" src="/src/main.jsx"></script>
 </body>

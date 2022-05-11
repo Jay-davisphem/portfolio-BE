@@ -5,7 +5,8 @@ import logo from "./logo.svg";
 import img from "./davis.png";
 import "./App.css";
 
-function App() {
+function App({hideLoader}) {
+  useEffect(() => hideLoader()) 
   return (
     <section className="text-white">
       <div className="md:m-36 mt-12 md:flex">

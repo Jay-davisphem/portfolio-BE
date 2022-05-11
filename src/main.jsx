@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import ReactDOM from "react-dom/client";
 
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
@@ -12,13 +12,20 @@ import NoMatch from "./pages/no-match";
 
 import "./index.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+const loader = document.querySelector('.loader');
+
+// if you want to show the loader when React loads data again
+const showLoader = () => loader.classList.remove('loader--hide');
+
+const hideLoader = () => loader.classList.add('loader--hide');
+
+setTimeout(() => ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
         {/* Just practicing redirection, path '/home' is no necessary */}
         <Route path="/" element={<Navigate replace to="/home" />} />
-        <Route path="/home" element={<App />} />
+        <Route path="/home" element={<App showLoader={showLoader} hideLoader={hideLoader} />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/abouts" element={<About />} />
@@ -27,4 +34,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
-);
+), 10000);
