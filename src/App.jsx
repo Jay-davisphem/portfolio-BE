@@ -5,6 +5,7 @@ import logo from "./logo.svg";
 import img from "./davis.png";
 import "./App.css";
 import NavLink from "./components/NavLink";
+import fetchUsers from './fetchUsers'
 function App({ hideLoader }) {
   useEffect(() => hideLoader());
   return (
@@ -36,7 +37,7 @@ function App({ hideLoader }) {
         <div>
           <img
             src={img}
-            className="md:absolute lg:ml-72 lg:-mt-24 max-w-xs lg:max-w-3xl md:max-w-md lg:relative max-w-md"
+            className="md:absolute lg:ml-72 lg:-mt-24 max-w-xs lg:max-w-3xl md:max-w-md lg:relative max-w-xs"
           />
         </div>
       </div>

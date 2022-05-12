@@ -21,15 +21,16 @@ export default function Skills() {
     ["Nodejs", node],
     ["C", c],
     ["C++", cpp],
-    ['Graaphql', graphql],
-    ['Typescript', ts],
-
+    ["Graaphql", graphql],
+    ["Typescript", ts],
   ];
   return (
     <main>
       <article>
-        <section className='my-24 text-left'>
-          <h2 className='ml-8 md:ml-72 my-8 md:my-12 text-4xl md:text-5xl'>Languages</h2>
+        <section className="my-24 text-left">
+          <h2 className="ml-8 md:ml-72 my-8 md:my-12 text-4xl md:text-5xl">
+            Languages
+          </h2>
           <section className="flex gap-y-16 gap-x-2 justify-center flex-wrap md:mx-48">
             {imageNames.map(([val, img]) => (
               <Skill name={val} img={img} />
